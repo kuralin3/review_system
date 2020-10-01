@@ -1,0 +1,99 @@
+/* review.cssとまとめてもいいかも */
+@charset "UTF-8";
+
+/* #table-wrapper {
+  width: 70%;
+  margin: 0 auto;
+} */
+
+.table {
+  border: 2px solid black;
+  /* table-layout: fixed; */
+  width: 50%;
+  margin: 0 auto;
+}
+table th {
+  font-weight: bold;
+  vertical-align: middle;
+	text-align: center;
+}
+
+table td {
+  width: 70%;
+  word-break : break-word;
+  text-align: center;
+  /* ↓break-allは英単語、記号に効かないので良くない！ */
+  /* word-break : break-all; */
+  /* overflow-wrap: break-word; */
+}
+.center {
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+
+ .table {
+ width: 100%;
+ }
+ .table th {
+ }
+ .table td {
+   width: 100%;
+   background-color: white;
+ }
+ th,td {
+ display: block;
+ text-align: center;
+ width: 100%;
+ }
+ #submit {
+   padding-bottom: 20px;
+ }
+}
+/* --------------------------------------------------------------------
+レーティングシステム（確認画面用）
+---------------------------------------------------------------------- */
+.rating p {
+  display: inline;
+}
+
+.rating {
+  text-align: center;
+  margin-left: 30px;
+  direction: rtl;
+  position: relative;
+}
+
+.rating input {
+  display:none;
+}
+
+.rating label::before {
+  content: '\f005';
+  font-family: 'Font Awesome 5 free';
+  font-weight: bold;
+  /* position: relative; */
+  display: inline;
+  font-size: 50px;
+  color: #F2F2F2;
+}
+.rating label::after {
+  content: '\f005';
+  font-family:  'Font Awesome 5 free';
+  font-weight: bold;
+  position: absolute;
+  /* reviewページと高さが変わる */
+  top: 0;/* 調整できるかな */
+  display: block;
+  font-size: 50px;
+  color: gold;
+  transition: 0.5s;
+  opacity: 1;
+  text-shadow: 0 0 10px gold;
+}
+/* 他の星をhoverしても表示させない */
+/* .rating label:hover::after,
+.rating label:hover ~ label::after, */
+.rating input:checked ~ label::after {
+  opacity: 1;
+}

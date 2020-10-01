@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+
+/* フレックスBOX */
+#wrapper {
+  margin: 40px 0 0;
+	display: flex;
+  justify-content: center;
+}
+
+#submit {
+  text-align: center;
+}
+
+#image img {
+  width: 350px;
+  height: 400px;
+
+}
+/* --------------------------------------------------------------- */
+
+/* #table-wrapper {
+  width: auto;
+  margin: 0 auto;
+} */
+
+table {
+  border: 1px solid black;
+  /* table-layout: fixed; */
+  /* width: 50%; */
+}
+table th {
+  font-weight: bold;
+  vertical-align: middle;
+	text-align: center;
+}
+
+.table td {
+  width: 70%;
+  word-break : break-word;
+  /* ↓break-allは英単語、記号に効かないので良くない！ */
+  /* word-break : break-all; */
+  /* overflow-wrap: break-word; */
+}
+.table td textarea {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1199px) {
+#image img {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+ table {
+ width: 100%;
+ }
+ .table td {
+   width: 100%;
+ }
+ th,td {
+ display: block;
+ text-align: center;
+ width: 100%;
+ }
+ #submit {
+   padding-bottom: 20px;
+ }
+}
+/* --------------------------------------------------------------------
+レーティングシステム
+---------------------------------------------------------------------- */
+.rating {
+  margin-left: 30px;
+  direction: rtl;
+  position: relative;
+}
+
+.rating input {
+  display:none;
+}
+
+.rating label::before {
+  content: '\f005';
+  font-family: 'Font Awesome 5 free';
+  font-weight: bold;
+  /* position: relative; *//* .ratingにpositionをつける */
+  display: block;
+  font-size: 50px;
+  color: black;
+}
+.rating label::after {
+  content: '\f005';
+  font-family:  'Font Awesome 5 free';
+  font-weight: bold;
+  position: absolute;
+  top: 0;/* 調整できるかな */
+  display: block;
+  font-size: 50px;
+  color: gold;
+  transition: 0.5s;
+  opacity: 0;
+  text-shadow: 0 0 5px gold,0 0 5px gold;
+}
+
+.rating label:hover::after,
+.rating label:hover ~ label::after,
+.rating input:checked ~ label::after {
+  opacity: 1;
+}
+
+/* .star-rating {
+    direction: rtl;
+    display: inline-block;
+    padding: 20px
+}
+
+.star-rating input[type=radio] {
+    display: none
+}
+
+.star-rating label {
+    color: #bbb;
+    font-size: 18px;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type=radio]:checked ~ label {
+    color: #f2b600
+} */

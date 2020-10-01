@@ -1,0 +1,93 @@
+@charset "UTF-8";
+table {
+  border: 2px solid black;
+  width: 100%;
+  /* height: auto; */
+}
+
+#wrapper table td {
+	vertical-align: middle;
+	text-align: center;
+}
+
+.button-table .btn {
+  border:1px solid black;
+  font-weight: bold;
+}
+
+img {
+  width: 120px;
+  height: 150px;
+
+}
+/* ---------------------------------------------------------------------------------
+モーダル
+------------------------------------------------------------------------------------ */
+/*モーダル*/
+.add-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+
+.inner {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  right: 15%;
+  background-color: #e6ecf0;
+  padding: 20px 1px 40px;
+  border-radius: 10px;
+  height: auto;
+  text-align: center;
+}
+
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+#button {
+  margin-left: 30px;
+}
+#add-form {
+  width: 100%;
+}
+
+#add-form {
+  color: #5f5d60;
+  letter-spacing: 1px;
+}
+
+#add-form label {
+  margin-bottom: 50px;
+}
+/* #add-form input {
+  width: 320px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 12px 12px;
+  border: 1px solid #d0d5d8;
+  border-radius: 5px;
+} */
+
+#submit-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color:grey;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: black;
+}
